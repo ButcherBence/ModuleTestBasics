@@ -371,6 +371,9 @@ public class Practice {
      * @return fognak-e harcolni
      */
     public static boolean willTheyFight(int s1, int t1, int s2, int t2) {
+
+        ///Megoldás 1.
+
         int[] starshipOnePoints = new int[1000000];
         starshipOnePoints[0]=s1;
         int[] starshipTwoPoints = new int[1000000];
@@ -385,6 +388,18 @@ public class Practice {
                 return true;
             }
         }
+        /// Megoldás 2
+        /*if (s1==s2){
+            return true;
+        }
+        for (int i = 0; i < Integer.MAX_VALUE; i++) {
+            s1 += t1;
+            s2 += t2;
+            if (s1==s2){
+                return true;
+            }
+
+        }*/
 
         return false;
     }
